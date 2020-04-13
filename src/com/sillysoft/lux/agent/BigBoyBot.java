@@ -17,8 +17,36 @@ public class BigBoyBot extends SmartAgentBase {
 
 
     //region Not allowed to use a Helper Class so have to do them here
-    public static void httpRequest(){
+    public static String httpRequest(String json) throws IOException{
+        URL url = new URL("http://localhost:8080/request-params");
+        HttpURLConnection con = (HttpURLConnection)url.openConnection();
+        con.setRequestMethod("POST");
+        con.setRequestProperty("Content-Type", "application/json; utf-8");
+        con.setRequestProperty("Accept", "application/json");
+        con.setDoOutput(true);
 
+        OutputStream os = con.getOutputStream();
+        try {
+            byte[] input = json.getBytes("utf-8");
+            os.write(input, 0, input.length);
+        } finally {
+            os.close();
+        }
+
+        BufferedReader br = new BufferedReader(
+                new InputStreamReader(con.getInputStream(), "utf-8")
+        );
+
+        try {
+            StringBuilder response = new StringBuilder();
+            String responseLine = null;
+            while ((responseLine = br.readLine()) != null) {
+                response.append(responseLine.trim());
+            }
+            return response.toString();
+        } finally {
+            br.close();
+        }
     }
     //endregion
 
@@ -51,37 +79,13 @@ public class BigBoyBot extends SmartAgentBase {
     @Override
     public void placeArmies(int numberOfArmies){
 
-        board.sendChat("BigBoyBot is placing armies");
-
+        System.out.println("BigBoyBot is placing armies");
         try {
-            URL url = new URL("localhost:8080/request-params");
-            HttpURLConnection con = (HttpURLConnection)url.openConnection();
-            con.setRequestMethod("POST");
-            con.setRequestProperty("Content-Type", "application/json; utf-8");
-            con.setRequestProperty("Accept", "application/json");
-            con.setDoOutput(true);
-
-            String json = "{\"weights\":[4,12,10,8,3,10]}";
-            try(OutputStream os = con.getOutputStream()) {
-                byte[] input = json.getBytes("utf-8");
-                os.write(input, 0, input.length);
-            }
-
-            try(BufferedReader br = new BufferedReader(
-                new InputStreamReader(con.getInputStream(), "utf-8"))) {
-                    StringBuilder response = new StringBuilder();
-                    String responseLine = null;
-                    while ((responseLine = br.readLine()) != null) {
-                        response.append(responseLine.trim());
-                    }
-                    System.out.println(response.toString());
-                }
-        } catch (MalformedURLException ex){
-            board.sendChat("Malformed URL");
+            System.out.println(httpRequest("{\"matrix\":[[4,12],[10,8],[3,10]]}").split(",")[0]);
         } catch (IOException ex){
-            board.sendChat("There was an IO Exception");
+            System.out.println("ERROR");
+            ex.printStackTrace();
         }
-
 
         int mostEnemies = -1;
         Country placeOn = null;
