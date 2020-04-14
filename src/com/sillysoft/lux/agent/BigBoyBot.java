@@ -1,6 +1,7 @@
 package com.sillysoft.lux.agent;
 
 import com.sillysoft.lux.Country;
+import com.sillysoft.lux.agent.utils.TestCopier;
 import com.sillysoft.lux.util.*;
 
 import java.io.BufferedReader;
@@ -52,7 +53,7 @@ public class BigBoyBot extends SmartAgentBase {
 
     @Override
     public String name() {
-        return "Big boy bot";
+        return new TestCopier("Ye boii").GetName();
     }
 
     @Override

@@ -10,15 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d81b3bd-fdc0-4e53-8cd9-94dc192b0569" name="Default Changelist" comment="Test that Lux Delux app can send HTTP requests">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+    <list default="true" id="6d81b3bd-fdc0-4e53-8cd9-94dc192b0569" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/TestCopier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBoyBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBoyBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +84,9 @@
       <workItem from="1586683197841" duration="1664000" />
       <workItem from="1586736170589" duration="62000" />
       <workItem from="1586737068064" duration="194000" />
-      <workItem from="1586747388832" duration="7367000" />
+      <workItem from="1586747388832" duration="7576000" />
+      <workItem from="1586850840286" duration="1445000" />
+      <workItem from="1586895716710" duration="2000000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1586762148773</created>
@@ -104,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586769118665</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add in IDEA files and Build script">
+      <created>1586769283266</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586769283266</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,11 +125,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Test that Lux Delux app can send HTTP requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test that Lux Delux app can send HTTP requests" />
+    <MESSAGE value="Add in IDEA files and Build script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add in IDEA files and Build script" />
   </component>
   <component name="WindowStateProjectService">
     <state x="11" y="195" key="#SQL_Dialects" timestamp="1586678421685">
@@ -139,22 +146,26 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser/0.23.1280.708@0.23.1280.708" timestamp="1586673849814" />
-    <state width="1188" height="163" key="GridCell.Tab.0.bottom" timestamp="1586768523137">
+    <state x="220" y="23" key="CommitChangelistDialog2" timestamp="1586769283079">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1586768523137" />
-    <state width="1188" height="163" key="GridCell.Tab.0.center" timestamp="1586768523137">
+    <state x="220" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1586769283079" />
+    <state width="1188" height="163" key="GridCell.Tab.0.bottom" timestamp="1586770270804">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1586768523137" />
-    <state width="1188" height="163" key="GridCell.Tab.0.left" timestamp="1586768523136">
+    <state width="1188" height="163" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1586770270804" />
+    <state width="1188" height="163" key="GridCell.Tab.0.center" timestamp="1586770270803">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1586768523136" />
-    <state width="1188" height="163" key="GridCell.Tab.0.right" timestamp="1586768523137">
+    <state width="1188" height="163" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1586770270803" />
+    <state width="1188" height="163" key="GridCell.Tab.0.left" timestamp="1586770270803">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1586768523137" />
+    <state width="1188" height="163" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1586770270803" />
+    <state width="1188" height="163" key="GridCell.Tab.0.right" timestamp="1586770270804">
+      <screen x="0" y="23" width="1280" height="708" />
+    </state>
+    <state width="1188" height="163" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1586770270804" />
     <state width="1188" height="203" key="GridCell.Tab.1.bottom" timestamp="1586670801995">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -195,9 +206,9 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="28" y="23" key="new project wizard/0.23.1280.708@0.23.1280.708" timestamp="1586737163981" />
-    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup" timestamp="1586674116355">
+    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup" timestamp="1586895759244">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup/0.23.1280.708@0.23.1280.708" timestamp="1586674116355" />
+    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup/0.23.1280.708@0.23.1280.708" timestamp="1586895759244" />
   </component>
 </project>
