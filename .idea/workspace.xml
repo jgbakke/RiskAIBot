@@ -11,9 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d81b3bd-fdc0-4e53-8cd9-94dc192b0569" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/TestCopier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SillysoftSDK.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBoyBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBoyBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,33 +43,35 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sillysoft.lux.agent.utils" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sillysoft.lux.Testing" />
+    <configuration name="Unnamed" type="Remote" nameIsGenerated="true">
       <module name="SillysoftSDK" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sillysoft.lux.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Testing" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -86,7 +90,10 @@
       <workItem from="1586737068064" duration="194000" />
       <workItem from="1586747388832" duration="7576000" />
       <workItem from="1586850840286" duration="1445000" />
-      <workItem from="1586895716710" duration="2000000" />
+      <workItem from="1586895716710" duration="2313000" />
+      <workItem from="1586914159252" duration="1165000" />
+      <workItem from="1586922392375" duration="609000" />
+      <workItem from="1586923078286" duration="1253000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1586762148773</created>
@@ -109,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586769283266</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Learn how to make Lux load additional files">
+      <created>1586897996072</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586897996072</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,69 +145,82 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Test that Lux Delux app can send HTTP requests" />
     <MESSAGE value="Add in IDEA files and Build script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add in IDEA files and Build script" />
+    <MESSAGE value="Learn how to make Lux load additional files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Learn how to make Lux load additional files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="11" y="195" key="#SQL_Dialects" timestamp="1586678421685">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="11" y="195" key="#SQL_Dialects/0.23.1280.708@0.23.1280.708" timestamp="1586678421685" />
-    <state x="87" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586768325676">
+    <state x="87" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586924153246">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="87" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.708@0.23.1280.708" timestamp="1586768325676" />
+    <state x="87" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.708@0.23.1280.708" timestamp="1586924153246" />
     <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser" timestamp="1586673849814">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser/0.23.1280.708@0.23.1280.708" timestamp="1586673849814" />
-    <state x="220" y="23" key="CommitChangelistDialog2" timestamp="1586769283079">
+    <state x="408" y="268" width="628" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586923910775">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="220" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1586769283079" />
-    <state width="1188" height="163" key="GridCell.Tab.0.bottom" timestamp="1586770270804">
+    <state x="408" y="268" width="628" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1280.708@0.23.1280.708" timestamp="1586923910775" />
+    <state x="220" y="23" key="CommitChangelistDialog2" timestamp="1586897995740">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1586770270804" />
-    <state width="1188" height="163" key="GridCell.Tab.0.center" timestamp="1586770270803">
+    <state x="220" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1586897995740" />
+    <state width="1188" height="163" key="GridCell.Tab.0.bottom" timestamp="1586923930710">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1586770270803" />
-    <state width="1188" height="163" key="GridCell.Tab.0.left" timestamp="1586770270803">
+    <state width="1188" height="163" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1586923930710" />
+    <state width="1188" height="163" key="GridCell.Tab.0.center" timestamp="1586923930709">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1586770270803" />
-    <state width="1188" height="163" key="GridCell.Tab.0.right" timestamp="1586770270804">
+    <state width="1188" height="163" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1586923930709" />
+    <state width="1188" height="163" key="GridCell.Tab.0.left" timestamp="1586923930708">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1586770270804" />
-    <state width="1188" height="203" key="GridCell.Tab.1.bottom" timestamp="1586670801995">
+    <state width="1188" height="163" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1586923930708" />
+    <state width="1188" height="163" key="GridCell.Tab.0.right" timestamp="1586923930709">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="203" key="GridCell.Tab.1.bottom/0.23.1280.708@0.23.1280.708" timestamp="1586670801995" />
-    <state width="1188" height="203" key="GridCell.Tab.1.center" timestamp="1586670801995">
+    <state width="1188" height="163" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1586923930709" />
+    <state width="1188" height="203" key="GridCell.Tab.1.bottom" timestamp="1586914974313">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="203" key="GridCell.Tab.1.center/0.23.1280.708@0.23.1280.708" timestamp="1586670801995" />
-    <state width="1188" height="203" key="GridCell.Tab.1.left" timestamp="1586670801994">
+    <state width="1188" height="203" key="GridCell.Tab.1.bottom/0.23.1280.708@0.23.1280.708" timestamp="1586914974313" />
+    <state width="1188" height="203" key="GridCell.Tab.1.center" timestamp="1586914974312">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="203" key="GridCell.Tab.1.left/0.23.1280.708@0.23.1280.708" timestamp="1586670801994" />
-    <state width="1188" height="203" key="GridCell.Tab.1.right" timestamp="1586670801995">
+    <state width="1188" height="203" key="GridCell.Tab.1.center/0.23.1280.708@0.23.1280.708" timestamp="1586914974312" />
+    <state width="1188" height="203" key="GridCell.Tab.1.left" timestamp="1586914974311">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="203" key="GridCell.Tab.1.right/0.23.1280.708@0.23.1280.708" timestamp="1586670801995" />
+    <state width="1188" height="203" key="GridCell.Tab.1.left/0.23.1280.708@0.23.1280.708" timestamp="1586914974311" />
+    <state width="1188" height="203" key="GridCell.Tab.1.right" timestamp="1586914974312">
+      <screen x="0" y="23" width="1280" height="708" />
+    </state>
+    <state width="1188" height="203" key="GridCell.Tab.1.right/0.23.1280.708@0.23.1280.708" timestamp="1586914974312" />
+    <state width="233" height="457" key="HiddenNamespacesPopup" timestamp="1586922915259">
+      <screen x="0" y="23" width="1280" height="708" />
+    </state>
+    <state width="233" height="457" key="HiddenNamespacesPopup/0.23.1280.708@0.23.1280.708" timestamp="1586922915259" />
     <state x="263" y="65" key="NewModule_or_Project.wizard" timestamp="1586726212256">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="263" y="65" key="NewModule_or_Project.wizard/0.23.1280.708@0.23.1280.708" timestamp="1586726212256" />
-    <state x="132" y="23" width="982" height="708" key="SettingsEditor" timestamp="1586768428530">
+    <state x="132" y="23" width="982" height="708" key="SettingsEditor" timestamp="1586923221053">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="132" y="23" width="982" height="708" key="SettingsEditor/0.23.1280.708@0.23.1280.708" timestamp="1586768428530" />
-    <state x="265" y="112" key="Vcs.Push.Dialog.v2" timestamp="1586762266533">
+    <state x="132" y="23" width="982" height="708" key="SettingsEditor/0.23.1280.708@0.23.1280.708" timestamp="1586923221053" />
+    <state x="265" y="112" key="Vcs.Push.Dialog.v2" timestamp="1586897999486">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="265" y="112" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1586762266533" />
+    <state x="265" y="112" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1586897999486" />
+    <state x="499" y="23" width="521" height="708" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1586923346394">
+      <screen x="0" y="23" width="1280" height="708" />
+    </state>
+    <state x="499" y="23" width="521" height="708" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1280.708@0.23.1280.708" timestamp="1586923346394" />
     <state x="371" y="122" key="extract.method.dialog" timestamp="1586768457691">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -206,9 +233,9 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="28" y="23" key="new project wizard/0.23.1280.708@0.23.1280.708" timestamp="1586737163981" />
-    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup" timestamp="1586895759244">
+    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup" timestamp="1586924515523">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup/0.23.1280.708@0.23.1280.708" timestamp="1586895759244" />
+    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup/0.23.1280.708@0.23.1280.708" timestamp="1586924515523" />
   </component>
 </project>

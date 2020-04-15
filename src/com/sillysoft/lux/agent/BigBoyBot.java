@@ -2,6 +2,7 @@ package com.sillysoft.lux.agent;
 
 import com.sillysoft.lux.Country;
 import com.sillysoft.lux.agent.utils.TestCopier;
+import com.sillysoft.lux.agent.utils.Testing;
 import com.sillysoft.lux.util.*;
 
 import java.io.BufferedReader;
@@ -80,13 +81,15 @@ public class BigBoyBot extends SmartAgentBase {
     @Override
     public void placeArmies(int numberOfArmies){
 
-        System.out.println("BigBoyBot is placing armies");
-        try {
-            System.out.println(httpRequest("{\"matrix\":[[4,12],[10,8],[3,10]]}").split(",")[0]);
-        } catch (IOException ex){
-            System.out.println("ERROR");
-            ex.printStackTrace();
-        }
+        Testing.Test(board);
+
+//        System.out.println("BigBoyBot is placing armies");
+//        try {
+//            System.out.println(httpRequest("{\"matrix\":[[4,12],[10,8],[3,10]]}").split(",")[0]);
+//        } catch (IOException ex){
+//            System.out.println("ERROR");
+//            ex.printStackTrace();
+//        }
 
         int mostEnemies = -1;
         Country placeOn = null;
