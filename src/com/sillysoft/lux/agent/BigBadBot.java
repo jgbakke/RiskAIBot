@@ -17,7 +17,11 @@ import java.net.URL;
 
 public class BigBadBot extends SmartAgentBase {
 
+    private final boolean DEBUG_MODE = true;
+
     private MissionManager missionManager;
+
+    private AbstractMission currentMission;
 
     //region Not allowed to use a Helper Class so have to do them here
     public static String httpRequest(String json) throws IOException{
@@ -53,7 +57,7 @@ public class BigBadBot extends SmartAgentBase {
     }
     //endregion
 
-    private AbstractMission ChooseMission(){
+    private AbstractMission chooseMission(){
         return missionManager.getOptimalMission();
     }
 
@@ -89,7 +93,44 @@ public class BigBadBot extends SmartAgentBase {
 
     @Override
     public void placeArmies(int numberOfArmies){
+        currentMission = chooseMission();
 
+        debugMessage("My mission is: " + currentMission.getMissionType().name());
+
+        int remainingArmies = currentMission.placeArmies(numberOfArmies);
+
+        if(remainingArmies > 0){
+            debugMessage(String.format("I did not place %d armies", remainingArmies));
+            defaultArmyPlacement(remainingArmies);
+        }
+
+    }
+
+    @Override
+    public void attackPhase() {
+        if(currentMission.executeMission()){
+            debugMessage("I captured at least one country");
+        } else {
+            debugMessage("I did not capture anything");
+        }
+    }
+
+    @Override
+    public int moveArmiesIn(int cca, int ccd) {
+        return countries[cca].getArmies()-1;
+    }
+
+    @Override
+    public void fortifyPhase() {
+
+    }
+
+    @Override
+    public String youWon() {
+        return "I won haha";
+    }
+
+    private void defaultArmyPlacement(int numArmies){
         int mostEnemies = -1;
         Country placeOn = null;
         int subTotalEnemies = 0;
@@ -112,40 +153,12 @@ public class BigBadBot extends SmartAgentBase {
 
         // So now placeOn is the country that we own with the most enemies.
         // Tell the board to place all of our armies there
-        board.placeArmies( numberOfArmies, placeOn);
+        board.placeArmies( numArmies, placeOn);
     }
 
-    @Override
-    public void attackPhase() {
-
-        System.out.println("BIG BOY BOT CALLED");
-        CountryIterator armies = new ArmiesIterator( ID, 2, countries );
-        if(armies.hasNext()){
-            Country me = armies.next();
-
-            Country[] adjacents = me.getAdjoiningList();
-            for(Country c : adjacents){
-                if(c.getOwner() != this.ID){
-                    if(c.getArmies() < me.getArmies()){
-                        board.attack(me, c, true);
-                    }
-                }
-            }
+    public void debugMessage(String s){
+        if(DEBUG_MODE){
+            board.sendChat(s);
         }
-    }
-
-    @Override
-    public int moveArmiesIn(int cca, int ccd) {
-        return countries[cca].getArmies()-1;
-    }
-
-    @Override
-    public void fortifyPhase() {
-
-    }
-
-    @Override
-    public String youWon() {
-        return "I won haha";
     }
 }

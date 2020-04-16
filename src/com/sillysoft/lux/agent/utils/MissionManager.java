@@ -8,7 +8,16 @@ public class MissionManager {
     private HashSet<AbstractMission> missions = new HashSet<AbstractMission>();
 
     public MissionManager(Board board){
-        missions.add(new TakeContinent(MissionType.TAKE_CONTINENT, board));
+        InitializeMissions(board);
+    }
+
+    private void InitializeMissions(Board board){
+        missions.add(new TakeContinent());
+
+        // Java 6 does not support lambdas :(
+        for (AbstractMission mission : missions){
+            mission.setBoard(board);
+        }
     }
 
     public AbstractMission getOptimalMission(){
