@@ -1,8 +1,10 @@
 package com.sillysoft.lux.agent;
 
+import com.sillysoft.lux.Board;
 import com.sillysoft.lux.Country;
-import com.sillysoft.lux.agent.utils.TestCopier;
-import com.sillysoft.lux.agent.utils.Testing;
+import com.sillysoft.lux.agent.utils.AbstractMission;
+import com.sillysoft.lux.agent.utils.MissionManager;
+import com.sillysoft.lux.agent.utils.MissionType;
 import com.sillysoft.lux.util.*;
 
 import java.io.BufferedReader;
@@ -10,13 +12,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 
 
-public class BigBoyBot extends SmartAgentBase {
+public class BigBadBot extends SmartAgentBase {
 
+    private MissionManager missionManager;
 
     //region Not allowed to use a Helper Class so have to do them here
     public static String httpRequest(String json) throws IOException{
@@ -52,10 +53,18 @@ public class BigBoyBot extends SmartAgentBase {
     }
     //endregion
 
-    @Override
-    public String name() {
-        return new TestCopier("Ye boii").GetName();
+    private AbstractMission ChooseMission(){
+        return missionManager.getOptimalMission();
     }
+
+    @Override
+    public void setPrefs(int newID, Board theboard){
+        super.setPrefs(newID, theboard);
+        missionManager = new MissionManager(theboard);
+    }
+
+    @Override
+    public String name() { return "Big Bad Bot"; }
 
     @Override
     public float version() {
@@ -80,16 +89,6 @@ public class BigBoyBot extends SmartAgentBase {
 
     @Override
     public void placeArmies(int numberOfArmies){
-
-        Testing.Test(board);
-
-//        System.out.println("BigBoyBot is placing armies");
-//        try {
-//            System.out.println(httpRequest("{\"matrix\":[[4,12],[10,8],[3,10]]}").split(",")[0]);
-//        } catch (IOException ex){
-//            System.out.println("ERROR");
-//            ex.printStackTrace();
-//        }
 
         int mostEnemies = -1;
         Country placeOn = null;

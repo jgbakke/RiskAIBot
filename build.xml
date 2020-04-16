@@ -4,7 +4,7 @@
 	<!-- Edit these properties to fit your build environment. 
 		 Then you will be able to run the 'ant dist' command to re-compile 
 		 and deploy your file to where Lux will find it. -->
-	<property name="built_file" location="build/com/sillysoft/lux/agent/BigBoyBot.class" />
+	<property name="built_file" location="build/com/sillysoft/lux/agent/BigBadBot.class" />
 	<property name="lux_agent_folder" location="${user.home}/Library/Application Support/Lux/Agents/" />
 	<property name="lux_mapgen_folder" location="${user.home}/Library/Application Support/Lux/MapGenerators/" />
   
