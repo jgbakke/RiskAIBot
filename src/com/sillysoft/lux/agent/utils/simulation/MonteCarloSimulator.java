@@ -13,7 +13,7 @@ public class MonteCarloSimulator {
             int currentDefenders = defenders;
 
             while(currentAttackers > 0) {
-                CombatRoundResult rollResult = CombatRoundResult.lookup(attackers, defenders);
+                CombatRoundResult rollResult = CombatRoundResult.lookup(currentAttackers, currentDefenders);
                 Pair<Integer, Integer> casualties = rollResult.getCasualtiesInflicted();
 
                 currentAttackers -= casualties.getKey();

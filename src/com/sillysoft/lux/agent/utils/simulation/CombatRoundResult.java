@@ -34,8 +34,8 @@ public class CombatRoundResult {
 
 
     public static CombatRoundResult lookup(int attackers, int defenders){
-        attackers = Math.max(attackers, 3);
-        defenders = Math.max(defenders, 2);
+        attackers = Math.min(attackers, 3);
+        defenders = Math.min(defenders, 2);
 
         return diceLookup.get(new Pair<Integer, Integer>(attackers, defenders));
     }
