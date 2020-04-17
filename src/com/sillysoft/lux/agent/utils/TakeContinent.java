@@ -49,7 +49,7 @@ public class TakeContinent extends AbstractMission {
         return bot.takeContinent(cachedMission.optimalID);
     }
 
-    // Returns the number of countries in continent NOT owned by owner
+    // Returns the LIST of countries in continent NOT owned by owner
     public static int[] unownedCountriesInContinent(int owner, int continent, Country[] countries){
         ArrayList<Integer> unownedCountries = new ArrayList<Integer>();
 
@@ -69,5 +69,11 @@ public class TakeContinent extends AbstractMission {
         }
 
         return retval;
+    }
+
+    // Returns the NUMBER owned by owner in continent
+    public static int numberOwnedInContinent(int owner, int continent, Country[] countries){
+        return BoardHelper.getContinentSize(continent, countries) -
+                unownedCountriesInContinent(owner, continent, countries).length;
     }
 }

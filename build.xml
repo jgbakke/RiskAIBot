@@ -13,7 +13,6 @@
 	<target name="dist" depends="compile">
 		<copy file="${built_file}" todir="${lux_agent_folder}"/>
 		<copy todir="${lux_agent_folder}/com/sillysoft/lux/agent/utils">
-			<!-- TODO: Test that copy fileset works -->
 			<fileset dir="build/com/sillysoft/lux/agent/utils" />
 		</copy>
 	</target>

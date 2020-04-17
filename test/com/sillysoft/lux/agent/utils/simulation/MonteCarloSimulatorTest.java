@@ -32,7 +32,6 @@ class MonteCarloSimulatorTest {
 
     @Test
     void simulateBattleLoss() {
-        // TODO: Investigate this
         SimulationResult res = simulator.simulateBattle(1, 3, SIMULATIONS);
         Assertions.assertFalse(res.victory);
         Assertions.assertEquals(0.03, res.percentChanceAnyWin, WIN_DELTA);

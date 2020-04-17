@@ -224,10 +224,11 @@ public class BigBadBot extends SmartAgentBase {
 
         int armies = reinforcements;
 
-        if(countriesInRoute.length == 0){
+        if(countriesInRoute.length > 0){
             armies += countriesInRoute[0].getArmies();
         }
 
+        // TODO: Why always 1 country?
         return simulator.simulatePathResults(countriesInRoute, armies, 100);
     }
 
@@ -257,22 +258,41 @@ public class BigBadBot extends SmartAgentBase {
             }
 
             double utility = 0;
-            int continentBonus = 0;
+            double continentBonus = 0;
 
             PathSimulationResult pathToContinent = simulateEasiestPathToContinent(cont, reinforcements);
-            int countriesGained = pathToContinent.countriesCaptured;
+            double countriesGained = pathToContinent.countriesCaptured;
 
             if(pathToContinent.reachedContinent) {
                 // Now that we reached the continent we also need to Monte Carlo simulate this
-                int ours = pathToContinent.armiesLeft;
+                int ours = (int)Math.round(pathToContinent.armiesLeft);
 
                 int[] pathOnContinent = TakeContinent.unownedCountriesInContinent(ID, cont, countries);
 
-                PathSimulationResult continentBattle = simulatePath(pathOnContinent, pathToContinent.armiesLeft);
+                PathSimulationResult continentBattle = simulatePath(pathOnContinent, ours);
                 countriesGained += continentBattle.countriesCaptured;
 
-                if (continentBattle.reachedContinent) {
+                boolean conqueredContinent = continentBattle.countriesCaptured +
+                        TakeContinent.numberOwnedInContinent(ID, cont, countries) == BoardHelper.getContinentSize(cont, countries);
+
+                if (continentBattle.reachedContinent || conqueredContinent) {
                     continentBonus = board.getContinentBonus(cont);
+                    debugMessage("Expected to conquer " + board.getContinentName(cont));
+                } else {
+                    // If we don't capture the whole continent, the bonus shall be 2/3 of the proportion we got
+                    double continentBonusModifier = 0.67;
+                    double countriesEstimatedControlled = (double) continentBattle.countriesCaptured +
+                            (double) TakeContinent.numberOwnedInContinent(ID, cont, countries);
+
+                    debugMessage(String.format("Size of %s: %d", board.getContinentName(cont), BoardHelper.getContinentSize(cont, countries)));
+
+                    double totalCountries = (double) BoardHelper.getContinentSize(cont, countries);
+
+                    double realContinentBonus = (double)board.getContinentBonus(cont);
+
+                    debugMessage(String.format("CBM %f, CEC %f, TC %f, RCB %f", continentBonusModifier, countriesEstimatedControlled, totalCountries, realContinentBonus));
+
+                    continentBonus = countriesEstimatedControlled / totalCountries * realContinentBonus * continentBonusModifier;
                 }
             }
 
@@ -283,7 +303,7 @@ public class BigBadBot extends SmartAgentBase {
             if(utility > optimalContinent.utility){
                 optimalContinent = new MissionBenefit(cont, utility);
 
-                debugMessage(String.format("Utility is %f, from %d estimated countries gained and %d continent bonus", utility, countriesGained, continentBonus));
+                debugMessage(String.format("Utility for %s is %f, from %f estimated countries gained and %f continent bonus", board.getContinentName(cont), utility, countriesGained, continentBonus));
             }
 
         }
