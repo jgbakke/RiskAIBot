@@ -9,7 +9,7 @@ public abstract class AbstractMission {
     public abstract MissionType getMissionType();
 
     // Get the chance based on current conditions to accept this mission
-    public abstract double acceptMissionChance();
+    public abstract double acceptMissionChance(int armies);
 
     // Place armies, returns number of unplaced armies, should usually be 0
     public abstract int placeArmies(int numArmies);

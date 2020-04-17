@@ -3,8 +3,8 @@ package com.sillysoft.lux.agent;
 import com.sillysoft.lux.Board;
 import com.sillysoft.lux.Country;
 import com.sillysoft.lux.agent.utils.AbstractMission;
+import com.sillysoft.lux.agent.utils.BigBadBotHelper;
 import com.sillysoft.lux.agent.utils.MissionManager;
-import com.sillysoft.lux.agent.utils.MissionType;
 import com.sillysoft.lux.util.*;
 
 import java.io.BufferedReader;
@@ -57,13 +57,14 @@ public class BigBadBot extends SmartAgentBase {
     }
     //endregion
 
-    private AbstractMission chooseMission(){
-        return missionManager.getOptimalMission();
+    private AbstractMission chooseMission(int armiesAvailable){
+        return missionManager.getOptimalMission(armiesAvailable);
     }
 
     @Override
     public void setPrefs(int newID, Board theboard){
         super.setPrefs(newID, theboard);
+        BigBadBotHelper.initInstance(this);
         missionManager = new MissionManager(theboard);
     }
 
@@ -93,7 +94,7 @@ public class BigBadBot extends SmartAgentBase {
 
     @Override
     public void placeArmies(int numberOfArmies){
-        currentMission = chooseMission();
+        currentMission = chooseMission(numberOfArmies);
 
         debugMessage("My mission is: " + currentMission.getMissionType().name());
 
@@ -160,5 +161,37 @@ public class BigBadBot extends SmartAgentBase {
         if(DEBUG_MODE){
             board.sendChat(s);
         }
+    }
+
+    public int getEasiestContToTake(int reinforcements) {
+        // Normally would override from SmartAgentBase but they do not accept a param
+        // and cannot change that class (can't rebuild it)
+
+        // For each continent we calculate the ratio of (our armies):(enemy armies)
+        // The biggest one wins.
+        float easiestContRatio = -1;
+        int easiestCont = -1;
+        for (int cont = 0; cont < numContinents; cont++) {
+            // Enemy ratio is armies + number of countries + number of path armies + number of path countries
+            int enemies = BoardHelper.getEnemyArmiesInContinent( ID, cont, countries );
+            enemies += BoardHelper.getContinentSize(cont, countries);
+
+            // TODO: Monte Carlo for odds
+//            int[] routeToCont = BoardHelper.cheapestRouteFromOwnerToCont(ID, cont, countries);
+//            enemies +=
+//
+//            enemies +=
+
+
+            int ours = BoardHelper.getPlayerArmiesInContinent( ID, cont, countries );
+            ours += reinforcements;
+            float newratio = (float)ours/(float)enemies;
+            if (newratio > easiestContRatio && board.getContinentBonus(cont) > 0) {
+                easiestCont = cont;
+                easiestContRatio = newratio;
+            }
+        }
+
+        return easiestCont;
     }
 }

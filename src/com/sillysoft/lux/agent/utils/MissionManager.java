@@ -20,11 +20,11 @@ public class MissionManager {
         }
     }
 
-    public AbstractMission getOptimalMission(){
+    public AbstractMission getOptimalMission(final int armies){
         return Collections.max(missions, new Comparator<AbstractMission>() {
             @Override
             public int compare(AbstractMission a, AbstractMission b) {
-                return Double.compare(a.acceptMissionChance(), b.acceptMissionChance());
+                return Double.compare(a.acceptMissionChance(armies), b.acceptMissionChance(armies));
             }
         });
     }

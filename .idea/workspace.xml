@@ -11,6 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d81b3bd-fdc0-4e53-8cd9-94dc192b0569" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/BigBadBotHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/CombatRoundResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloWeight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/SimulationResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBadBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBadBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/AbstractMission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/AbstractMission.java" afterDir="false" />
@@ -27,6 +32,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -54,6 +60,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sillysoft.lux.agent.utils.simulation" />
       <recent name="com.sillysoft.lux.agent.utils" />
     </key>
   </component>
@@ -94,7 +101,7 @@
       <workItem from="1586914159252" duration="1165000" />
       <workItem from="1586922392375" duration="609000" />
       <workItem from="1586923078286" duration="1318000" />
-      <workItem from="1587017635558" duration="9639000" />
+      <workItem from="1587017635558" duration="17404000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1586762148773</created>
@@ -138,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587030133866</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="BigBadBot runs in Lux">
+      <created>1587072726065</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587072726065</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +177,8 @@
     <MESSAGE value="Learn how to make Lux load additional files" />
     <MESSAGE value="Got SQLite to work with Lux" />
     <MESSAGE value="Missions classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Missions classes" />
+    <MESSAGE value="BigBadBot runs in Lux" />
+    <option name="LAST_COMMIT_MESSAGE" value="BigBadBot runs in Lux" />
   </component>
   <component name="WindowStateProjectService">
     <state x="153" y="23" key="#Project_Structure" timestamp="1587029176661">
@@ -178,18 +193,18 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="87" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.708@0.23.1280.708" timestamp="1587068277844" />
-    <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser" timestamp="1587072062908">
+    <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser" timestamp="1587080867532">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser/0.23.1280.708@0.23.1280.708" timestamp="1587072062908" />
-    <state x="408" y="268" width="628" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586923910775">
+    <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser/0.23.1280.708@0.23.1280.708" timestamp="1587080867532" />
+    <state x="408" y="268" width="771" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587077746225">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="408" y="268" width="628" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1280.708@0.23.1280.708" timestamp="1586923910775" />
-    <state x="286" y="23" key="CommitChangelistDialog2" timestamp="1587030133354">
+    <state x="408" y="268" width="771" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1280.708@0.23.1280.708" timestamp="1587077746225" />
+    <state x="286" y="23" key="CommitChangelistDialog2" timestamp="1587072725730">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="286" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587030133354" />
+    <state x="286" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587072725730" />
     <state width="1188" height="163" key="GridCell.Tab.0.bottom" timestamp="1586924798514">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -254,9 +269,9 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="28" y="23" key="new project wizard/0.23.1280.708@0.23.1280.708" timestamp="1586737163981" />
-    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup" timestamp="1587071975082">
+    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup" timestamp="1587075204053">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup/0.23.1280.708@0.23.1280.708" timestamp="1587071975082" />
+    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup/0.23.1280.708@0.23.1280.708" timestamp="1587075204053" />
   </component>
 </project>

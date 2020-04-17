@@ -10,7 +10,7 @@ public class TakeContinent extends AbstractMission {
     }
 
     @Override
-    public double acceptMissionChance() {
+    public double acceptMissionChance(int armies) {
         return 0;
     }
 
