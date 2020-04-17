@@ -11,12 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d81b3bd-fdc0-4e53-8cd9-94dc192b0569" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SillysoftSDK.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SillysoftSDK.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/CombatRoundResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/CombatRoundResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +53,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/test" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -75,7 +73,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MonteCarloMain">
+  <component name="RunManager" selected="JUnit.MonteCarloSimulatorTest">
     <configuration name="MonteCarloMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sillysoft.lux.agent.utils.simulation.MonteCarloMain" />
       <module name="SillysoftSDK" />
@@ -85,6 +83,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonteCarloSimulatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SillysoftSDK" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sillysoft.lux.agent.utils.simulation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sillysoft.lux.agent.utils.simulation" />
+      <option name="MAIN_CLASS_NAME" value="com.sillysoft.lux.agent.utils.simulation.MonteCarloSimulatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonteCarloSimulatorTest.simulateBattle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SillysoftSDK" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sillysoft.lux.agent.utils.simulation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sillysoft.lux.agent.utils.simulation" />
+      <option name="MAIN_CLASS_NAME" value="com.sillysoft.lux.agent.utils.simulation.MonteCarloSimulatorTest" />
+      <option name="METHOD_NAME" value="simulateBattle" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,6 +134,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MonteCarloSimulatorTest" />
+        <item itemvalue="JUnit.MonteCarloSimulatorTest.simulateBattle" />
         <item itemvalue="Application.MonteCarloMain" />
       </list>
     </recent_temporary>
@@ -130,7 +161,7 @@
       <workItem from="1586914159252" duration="1165000" />
       <workItem from="1586922392375" duration="609000" />
       <workItem from="1586923078286" duration="1318000" />
-      <workItem from="1587017635558" duration="18542000" />
+      <workItem from="1587017635558" duration="20600000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1586762148773</created>
@@ -188,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587082372064</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Created a test class">
+      <created>1587083554480</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587083554480</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +253,8 @@
     <MESSAGE value="Missions classes" />
     <MESSAGE value="BigBadBot runs in Lux" />
     <MESSAGE value="Monte Carlo classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Monte Carlo classes" />
+    <MESSAGE value="Created a test class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a test class" />
   </component>
   <component name="WindowStateProjectService">
     <state x="153" y="23" key="#Project_Structure" timestamp="1587029176661">
@@ -230,58 +269,62 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="87" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.708@0.23.1280.708" timestamp="1587068277844" />
+    <state x="144" y="159" width="1030" height="471" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587085467844">
+      <screen x="0" y="23" width="1280" height="708" />
+    </state>
+    <state x="144" y="159" width="1030" height="471" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1280.708@0.23.1280.708" timestamp="1587085467844" />
     <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser" timestamp="1587080867532">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser/0.23.1280.708@0.23.1280.708" timestamp="1587080867532" />
-    <state x="402" y="178" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587083429959">
+    <state x="402" y="178" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587083592965">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="402" y="178" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1280.708@0.23.1280.708" timestamp="1587083429959" />
-    <state x="408" y="268" width="771" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587077746225">
+    <state x="402" y="178" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1280.708@0.23.1280.708" timestamp="1587083592965" />
+    <state x="408" y="268" width="771" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587083634805">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="408" y="268" width="771" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1280.708@0.23.1280.708" timestamp="1587077746225" />
+    <state x="408" y="268" width="771" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1280.708@0.23.1280.708" timestamp="1587083634805" />
     <state x="413" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587083351496">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="413" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1280.708@0.23.1280.708" timestamp="1587083351496" />
-    <state x="286" y="23" key="CommitChangelistDialog2" timestamp="1587082371816">
+    <state x="286" y="23" key="CommitChangelistDialog2" timestamp="1587083554162">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="286" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587082371816" />
-    <state width="1188" height="163" key="GridCell.Tab.0.bottom" timestamp="1587083284256">
+    <state x="286" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587083554162" />
+    <state width="1188" height="294" key="GridCell.Tab.0.bottom" timestamp="1587085534550">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587083284256" />
-    <state width="1188" height="163" key="GridCell.Tab.0.center" timestamp="1587083284255">
+    <state width="1188" height="294" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587085534550" />
+    <state width="1188" height="294" key="GridCell.Tab.0.center" timestamp="1587085534550">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1587083284255" />
-    <state width="1188" height="163" key="GridCell.Tab.0.left" timestamp="1587083284255">
+    <state width="1188" height="294" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1587085534550" />
+    <state width="1188" height="294" key="GridCell.Tab.0.left" timestamp="1587085534549">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1587083284255" />
-    <state width="1188" height="163" key="GridCell.Tab.0.right" timestamp="1587083284256">
+    <state width="1188" height="294" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1587085534549" />
+    <state width="1188" height="294" key="GridCell.Tab.0.right" timestamp="1587085534550">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="163" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1587083284256" />
-    <state width="1188" height="203" key="GridCell.Tab.1.bottom" timestamp="1587082913519">
+    <state width="1188" height="294" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1587085534550" />
+    <state width="1188" height="203" key="GridCell.Tab.1.bottom" timestamp="1587084513215">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="203" key="GridCell.Tab.1.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587082913519" />
-    <state width="1188" height="203" key="GridCell.Tab.1.center" timestamp="1587082913518">
+    <state width="1188" height="203" key="GridCell.Tab.1.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587084513215" />
+    <state width="1188" height="203" key="GridCell.Tab.1.center" timestamp="1587084513214">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="203" key="GridCell.Tab.1.center/0.23.1280.708@0.23.1280.708" timestamp="1587082913518" />
-    <state width="1188" height="203" key="GridCell.Tab.1.left" timestamp="1587082913518">
+    <state width="1188" height="203" key="GridCell.Tab.1.center/0.23.1280.708@0.23.1280.708" timestamp="1587084513214" />
+    <state width="1188" height="203" key="GridCell.Tab.1.left" timestamp="1587084513213">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="203" key="GridCell.Tab.1.left/0.23.1280.708@0.23.1280.708" timestamp="1587082913518" />
-    <state width="1188" height="203" key="GridCell.Tab.1.right" timestamp="1587082913518">
+    <state width="1188" height="203" key="GridCell.Tab.1.left/0.23.1280.708@0.23.1280.708" timestamp="1587084513213" />
+    <state width="1188" height="203" key="GridCell.Tab.1.right" timestamp="1587084513214">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="203" key="GridCell.Tab.1.right/0.23.1280.708@0.23.1280.708" timestamp="1587082913518" />
+    <state width="1188" height="203" key="GridCell.Tab.1.right/0.23.1280.708@0.23.1280.708" timestamp="1587084513214" />
     <state width="233" height="457" key="HiddenNamespacesPopup" timestamp="1586922915259">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -298,6 +341,10 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="265" y="112" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1586924760705" />
+    <state x="589" y="181" key="chooseDestDirectoryDialog" timestamp="1587083632489">
+      <screen x="0" y="23" width="1280" height="708" />
+    </state>
+    <state x="589" y="181" key="chooseDestDirectoryDialog/0.23.1280.708@0.23.1280.708" timestamp="1587083632489" />
     <state x="499" y="23" width="521" height="708" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1586923346394">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
