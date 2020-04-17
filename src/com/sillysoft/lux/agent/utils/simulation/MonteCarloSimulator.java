@@ -28,7 +28,7 @@ public class MonteCarloSimulator {
         }
 
         double chanceToWin = (double)cumVictories / simulations;
-        int averageSurvivors = (int)Math.round((double)cumSurvivors / simulations);
+        double averageSurvivors = (double)cumSurvivors / simulations;
 
         return new SimulationResult(chanceToWin > 0.5, averageSurvivors, chanceToWin);
     }

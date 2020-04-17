@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class MonteCarloSimulatorTest {
 
-    public static final double WIN_DELTA = 0.03;
+    public static final double WIN_DELTA = 0.02;
     public static final double ARMIES_DELTA = 1;
     private final int SIMULATIONS = 3000;
 
@@ -14,11 +14,11 @@ class MonteCarloSimulatorTest {
 
     @Test
     void simulateBattle() {
-        Assertions.assertEquals(0.76, simulator.simulateBattle(7, 5, SIMULATIONS).percentChanceAnyWin, WIN_DELTA);
-        Assertions.assertEquals(0.73, simulator.simulateBattle(10, 8, SIMULATIONS).percentChanceAnyWin, WIN_DELTA);
-        Assertions.assertEquals(0.9, simulator.simulateBattle(22, 15, SIMULATIONS).percentChanceAnyWin,  WIN_DELTA);
+        Assertions.assertEquals(0.74, simulator.simulateBattle(7, 5, SIMULATIONS).percentChanceAnyWin, WIN_DELTA);
+        Assertions.assertEquals(0.72, simulator.simulateBattle(10, 8, SIMULATIONS).percentChanceAnyWin, WIN_DELTA);
+        Assertions.assertEquals(0.91, simulator.simulateBattle(22, 15, SIMULATIONS).percentChanceAnyWin,  WIN_DELTA);
         Assertions.assertEquals(1, simulator.simulateBattle(36, 11, SIMULATIONS).percentChanceAnyWin, WIN_DELTA);
-        Assertions.assertEquals(0.94, simulator.simulateBattle(9, 4, SIMULATIONS).percentChanceAnyWin, WIN_DELTA);
+        Assertions.assertEquals(0.93, simulator.simulateBattle(9, 4, SIMULATIONS).percentChanceAnyWin, WIN_DELTA);
     }
 
     @Test
@@ -43,14 +43,14 @@ class MonteCarloSimulatorTest {
         Assertions.assertEquals(0.02, res.percentChanceAnyWin, WIN_DELTA);
         Assertions.assertEquals(0, res.averageArmiesRemaining, ARMIES_DELTA);
 
-        res = simulator.simulateBattle(9, 10, SIMULATIONS);
+        res = simulator.simulateBattle(9, 15, SIMULATIONS);
         Assertions.assertFalse(res.victory);
-        Assertions.assertEquals(0.46, res.percentChanceAnyWin, WIN_DELTA);
+        Assertions.assertEquals(0.17, res.percentChanceAnyWin, WIN_DELTA);
         Assertions.assertEquals(0, res.averageArmiesRemaining, ARMIES_DELTA);
 
-        res = simulator.simulateBattle(11, 14, SIMULATIONS);
+        res = simulator.simulateBattle(11, 24, SIMULATIONS);
         Assertions.assertFalse(res.victory);
-        Assertions.assertEquals(0.44, res.percentChanceAnyWin, WIN_DELTA);
+        Assertions.assertEquals(0.03, res.percentChanceAnyWin, WIN_DELTA);
         Assertions.assertEquals(0, res.averageArmiesRemaining, ARMIES_DELTA);
 
         res = simulator.simulateBattle(1, 1, SIMULATIONS);

@@ -22,7 +22,7 @@ public class CombatRoundResult {
                         new CombatRoundResult(0.34, 0.66, 0, 1));
 
                 put(new Pair<Integer, Integer>(1, 2),
-                        new CombatRoundResult(0.745, 0.255, 0, 2));
+                        new CombatRoundResult(0.745, 0.255, 0, 1));
 
                 put(new Pair<Integer, Integer>(2, 2),
                         new CombatRoundResult(0.448, 0.228, 0.324, 2));

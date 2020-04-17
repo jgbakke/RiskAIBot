@@ -12,8 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6d81b3bd-fdc0-4e53-8cd9-94dc192b0569" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SillysoftSDK.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SillysoftSDK.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/CombatRoundResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/CombatRoundResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/SimulationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/SimulationResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +163,7 @@
       <workItem from="1586914159252" duration="1165000" />
       <workItem from="1586922392375" duration="609000" />
       <workItem from="1586923078286" duration="1318000" />
-      <workItem from="1587017635558" duration="20600000" />
+      <workItem from="1587017635558" duration="21603000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1586762148773</created>
@@ -226,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587083554480</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Tests for Monte Carlo">
+      <created>1587085577627</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587085577627</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +263,8 @@
     <MESSAGE value="BigBadBot runs in Lux" />
     <MESSAGE value="Monte Carlo classes" />
     <MESSAGE value="Created a test class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a test class" />
+    <MESSAGE value="Tests for Monte Carlo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests for Monte Carlo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="153" y="23" key="#Project_Structure" timestamp="1587029176661">
@@ -269,10 +279,10 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="87" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.708@0.23.1280.708" timestamp="1587068277844" />
-    <state x="144" y="159" width="1030" height="471" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587085467844">
+    <state x="144" y="159" width="1030" height="471" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587094686502">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="144" y="159" width="1030" height="471" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1280.708@0.23.1280.708" timestamp="1587085467844" />
+    <state x="144" y="159" width="1030" height="471" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1280.708@0.23.1280.708" timestamp="1587094686502" />
     <state x="456" y="87" key="#com.intellij.ide.util.MemberChooser" timestamp="1587080867532">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -289,26 +299,26 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="413" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1280.708@0.23.1280.708" timestamp="1587083351496" />
-    <state x="286" y="23" key="CommitChangelistDialog2" timestamp="1587083554162">
+    <state x="179" y="23" key="CommitChangelistDialog2" timestamp="1587085577361">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="286" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587083554162" />
-    <state width="1188" height="294" key="GridCell.Tab.0.bottom" timestamp="1587085534550">
+    <state x="179" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587085577361" />
+    <state width="1188" height="294" key="GridCell.Tab.0.bottom" timestamp="1587094690589">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587085534550" />
-    <state width="1188" height="294" key="GridCell.Tab.0.center" timestamp="1587085534550">
+    <state width="1188" height="294" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587094690589" />
+    <state width="1188" height="294" key="GridCell.Tab.0.center" timestamp="1587094690582">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1587085534550" />
-    <state width="1188" height="294" key="GridCell.Tab.0.left" timestamp="1587085534549">
+    <state width="1188" height="294" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1587094690582" />
+    <state width="1188" height="294" key="GridCell.Tab.0.left" timestamp="1587094690579">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1587085534549" />
-    <state width="1188" height="294" key="GridCell.Tab.0.right" timestamp="1587085534550">
+    <state width="1188" height="294" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1587094690579" />
+    <state width="1188" height="294" key="GridCell.Tab.0.right" timestamp="1587094690588">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1587085534550" />
+    <state width="1188" height="294" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1587094690588" />
     <state width="1188" height="203" key="GridCell.Tab.1.bottom" timestamp="1587084513215">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -337,10 +347,10 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="132" y="23" width="982" height="708" key="SettingsEditor/0.23.1280.708@0.23.1280.708" timestamp="1586923221053" />
-    <state x="265" y="112" key="Vcs.Push.Dialog.v2" timestamp="1586924760705">
+    <state x="265" y="112" key="Vcs.Push.Dialog.v2" timestamp="1587085579202">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="265" y="112" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1586924760705" />
+    <state x="265" y="112" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1587085579202" />
     <state x="589" y="181" key="chooseDestDirectoryDialog" timestamp="1587083632489">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
