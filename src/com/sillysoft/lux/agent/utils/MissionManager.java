@@ -19,6 +19,12 @@ public class MissionManager {
         missions.add(new TakeContinent(board, this.bot));
     }
 
+    public void clearMissions(){
+        for (AbstractMission mission : missions) {
+            mission.clearMission();
+        }
+    }
+
     public AbstractMission getOptimalMission(final int armies){
         return Collections.max(missions, new Comparator<AbstractMission>() {
             @Override

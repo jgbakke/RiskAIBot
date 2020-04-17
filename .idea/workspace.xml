@@ -13,7 +13,10 @@
     <list default="true" id="6d81b3bd-fdc0-4e53-8cd9-94dc192b0569" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBadBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBadBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/AbstractMission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/AbstractMission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/MissionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/MissionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/TakeContinent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/TakeContinent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -161,7 +164,7 @@
       <workItem from="1586914159252" duration="1165000" />
       <workItem from="1586922392375" duration="609000" />
       <workItem from="1586923078286" duration="1318000" />
-      <workItem from="1587017635558" duration="33214000" />
+      <workItem from="1587017635558" duration="35061000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1586762148773</created>
@@ -254,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587107721196</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Cleaning up some code">
+      <created>1587107941030</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587107941030</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +296,8 @@
     <MESSAGE value="Make the tests for Monte Carlo pass" />
     <MESSAGE value="Continent path Monte Carlo simulations" />
     <MESSAGE value="AI runs in Lux without crashing" />
-    <option name="LAST_COMMIT_MESSAGE" value="AI runs in Lux without crashing" />
+    <MESSAGE value="Cleaning up some code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up some code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="153" y="23" key="#Project_Structure" timestamp="1587029176661">
@@ -321,26 +332,26 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="413" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1280.708@0.23.1280.708" timestamp="1587083351496" />
-    <state x="179" y="23" key="CommitChangelistDialog2" timestamp="1587107720971">
+    <state x="179" y="23" key="CommitChangelistDialog2" timestamp="1587107940818">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="179" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587107720971" />
-    <state width="1188" height="294" key="GridCell.Tab.0.bottom" timestamp="1587107519911">
+    <state x="179" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587107940818" />
+    <state width="1188" height="294" key="GridCell.Tab.0.bottom" timestamp="1587109235968">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587107519911" />
-    <state width="1188" height="294" key="GridCell.Tab.0.center" timestamp="1587107519911">
+    <state width="1188" height="294" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587109235968" />
+    <state width="1188" height="294" key="GridCell.Tab.0.center" timestamp="1587109235967">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1587107519911" />
-    <state width="1188" height="294" key="GridCell.Tab.0.left" timestamp="1587107519910">
+    <state width="1188" height="294" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1587109235967" />
+    <state width="1188" height="294" key="GridCell.Tab.0.left" timestamp="1587109235966">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1587107519910" />
-    <state width="1188" height="294" key="GridCell.Tab.0.right" timestamp="1587107519911">
+    <state width="1188" height="294" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1587109235966" />
+    <state width="1188" height="294" key="GridCell.Tab.0.right" timestamp="1587109235967">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1587107519911" />
+    <state width="1188" height="294" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1587109235967" />
     <state width="1188" height="203" key="GridCell.Tab.1.bottom" timestamp="1587084513215">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -365,10 +376,10 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="263" y="65" key="NewModule_or_Project.wizard/0.23.1280.708@0.23.1280.708" timestamp="1586726212256" />
-    <state x="132" y="23" width="982" height="708" key="SettingsEditor" timestamp="1587098974514">
+    <state x="132" y="23" width="982" height="708" key="SettingsEditor" timestamp="1587109715672">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="132" y="23" width="982" height="708" key="SettingsEditor/0.23.1280.708@0.23.1280.708" timestamp="1587098974514" />
+    <state x="132" y="23" width="982" height="708" key="SettingsEditor/0.23.1280.708@0.23.1280.708" timestamp="1587109715672" />
     <state x="265" y="112" key="Vcs.Push.Dialog.v2" timestamp="1587107722628">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -393,17 +404,17 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="371" y="122" key="extract.method.dialog/0.23.1280.708@0.23.1280.708" timestamp="1586768457691" />
-    <state x="323" y="23" width="600" height="708" key="find.popup" timestamp="1587107209129">
+    <state x="323" y="23" width="600" height="708" key="find.popup" timestamp="1587109981478">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="323" y="23" width="600" height="708" key="find.popup/0.23.1280.708@0.23.1280.708" timestamp="1587107209128" />
+    <state x="323" y="23" width="600" height="708" key="find.popup/0.23.1280.708@0.23.1280.708" timestamp="1587109981478" />
     <state x="28" y="23" key="new project wizard" timestamp="1586737163981">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="28" y="23" key="new project wizard/0.23.1280.708@0.23.1280.708" timestamp="1586737163981" />
-    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup" timestamp="1587106745005">
+    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup" timestamp="1587108728189">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup/0.23.1280.708@0.23.1280.708" timestamp="1587106745005" />
+    <state x="288" y="55" width="670" height="676" key="search.everywhere.popup/0.23.1280.708@0.23.1280.708" timestamp="1587108728189" />
   </component>
 </project>

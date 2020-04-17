@@ -29,4 +29,8 @@ public abstract class AbstractMission {
     public void setMlMissionWeight(double mlMissionWeight) {
         this.mlMissionWeight = mlMissionWeight;
     }
+
+    public void clearMission(){
+        cachedMission = null;
+    }
 }

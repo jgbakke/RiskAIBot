@@ -22,7 +22,6 @@ public class TakeContinent extends AbstractMission {
     @Override
     public double acceptMissionChance(int armies) {
         cachedMission = bot.takeContinentChance(armies);
-        bot.debugMessage("Cached mission is: " + cachedMission.toString());
         return cachedMission.utility * mlMissionWeight;
     }
 
@@ -31,19 +30,17 @@ public class TakeContinent extends AbstractMission {
         if(cachedMission == null){
             bot.debugMessage("CACHED MISSION IS NULL");
             acceptMissionChance(numArmies);
-
-            if(cachedMission == null){
-                bot.debugMessage("WHY IS IT STILL NULL");
-            }
         }
 
-        bot.debugMessage("Place Armies called");
+        bot.debugMessage("STARTING PLACE ARMIES PHASE");
+
         bot.debugMessage("TakeContinent has been chosen: " + board.getContinentName(cachedMission.optimalID));
-        bot.debugMessage(String.format("Utility is %f", cachedMission.utility));
 
         bot.placeArmiesToTakeContinent(numArmies, cachedMission.optimalID);
 
-        return numArmies;
+        bot.debugMessage("PLACE ARMIES PHASE DONE");
+
+        return 0;
     }
 
     @Override

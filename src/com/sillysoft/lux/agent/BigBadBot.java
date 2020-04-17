@@ -107,6 +107,8 @@ public class BigBadBot extends SmartAgentBase {
 
     @Override
     public void placeArmies(int numberOfArmies){
+        debugMessage("STARTING PLACE ARMIES PHASE");
+
         currentMission = chooseMission(numberOfArmies);
 
         debugMessage("My mission is: " + currentMission.getMissionType().name());
@@ -117,8 +119,6 @@ public class BigBadBot extends SmartAgentBase {
             debugMessage(String.format("I did not place %d armies", remainingArmies));
             defaultArmyPlacement(remainingArmies);
         }
-
-        debugMessage(String.format("I placed %d armies total", numberOfArmies));
 
     }
 
@@ -147,6 +147,9 @@ public class BigBadBot extends SmartAgentBase {
             Country root = BoardHelper.getPlayersBiggestArmy(ID, countries);
             fortifyCluster( root );
         }
+
+        missionManager.clearMissions();
+        debugMessage("ENDING TURN");
     }
 
     @Override
@@ -193,11 +196,10 @@ public class BigBadBot extends SmartAgentBase {
 
     public boolean takeContinent(int c){
         while(attackToKillContinent(c)){
-            debugMessage("I took over a country in the continent");
+            //debugMessage("I took over a country in the continent");
         }
 
         if(board.tookOverACountry()){
-            debugMessage("I took over a country so I am happy");
             return true;
         } else {
             debugMessage("I did not kill so I will attack for card");
@@ -248,14 +250,14 @@ public class BigBadBot extends SmartAgentBase {
         MissionBenefit optimalContinent = new MissionBenefit(-1, -1);
 
         for (int cont = 0; cont < numContinents; cont++) {
-            debugMessage("Looking at " + cont);
 
             if(BoardHelper.playerOwnsContinent(ID, cont, countries)){
-                debugMessage("I already own continent " + cont);
+                debugMessage("I already own continent " + board.getContinentName(cont));
                 continue;
             }
 
             double utility = 0;
+            int continentBonus = 0;
 
             PathSimulationResult pathToContinent = simulateEasiestPathToContinent(cont, reinforcements);
             int countriesGained = pathToContinent.countriesCaptured;
@@ -270,14 +272,18 @@ public class BigBadBot extends SmartAgentBase {
                 countriesGained += continentBattle.countriesCaptured;
 
                 if (continentBattle.reachedContinent) {
-                    utility += board.getContinentBonus(cont);
+                    continentBonus = board.getContinentBonus(cont);
                 }
             }
 
             utility += countriesGained / 3.0;
+            utility += continentBonus;
+
 
             if(utility > optimalContinent.utility){
                 optimalContinent = new MissionBenefit(cont, utility);
+
+                debugMessage(String.format("Utility is %f, from %d estimated countries gained and %d continent bonus", utility, countriesGained, continentBonus));
             }
 
         }

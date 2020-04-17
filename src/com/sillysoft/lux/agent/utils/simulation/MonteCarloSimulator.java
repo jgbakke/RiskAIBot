@@ -22,8 +22,9 @@ public class MonteCarloSimulator {
         averageCountriesCaptured /= simulations;
         armiesLeft /= simulations;
 
+        // Need to subtract -1 from countries captured because it already includes your starting country
         return new PathSimulationResult(
-                (int)Math.round(averageCountriesCaptured),
+                (int)Math.round(averageCountriesCaptured) - 1,
                 (int)Math.round(armiesLeft),
                 reachedContinentChance / simulations > 0.5
         );
