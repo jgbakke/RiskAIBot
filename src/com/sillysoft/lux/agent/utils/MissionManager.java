@@ -1,23 +1,22 @@
 package com.sillysoft.lux.agent.utils;
 
 import com.sillysoft.lux.Board;
+import com.sillysoft.lux.agent.BigBadBot;
 
 import java.util.*;
 
 public class MissionManager {
     private HashSet<AbstractMission> missions = new HashSet<AbstractMission>();
 
-    public MissionManager(Board board){
+    private BigBadBot bot;
+
+    public MissionManager(Board board, BigBadBot bot){
+        this.bot = bot;
         InitializeMissions(board);
     }
 
     private void InitializeMissions(Board board){
-        missions.add(new TakeContinent());
-
-        // Java 6 does not support lambdas :(
-        for (AbstractMission mission : missions){
-            mission.setBoard(board);
-        }
+        missions.add(new TakeContinent(board, this.bot));
     }
 
     public AbstractMission getOptimalMission(final int armies){

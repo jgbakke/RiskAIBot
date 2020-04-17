@@ -1,8 +1,7 @@
 package com.sillysoft.lux.agent.utils.simulation;
 
 import com.sillysoft.lux.Country;
-import com.sillysoft.lux.agent.utils.MissionBenefit;
-import javafx.util.Pair;
+import com.sillysoft.lux.agent.utils.Pair;
 
 public class MonteCarloSimulator {
 
@@ -70,8 +69,8 @@ public class MonteCarloSimulator {
                 CombatRoundResult rollResult = CombatRoundResult.lookup(currentAttackers, currentDefenders);
                 Pair<Integer, Integer> casualties = rollResult.getCasualtiesInflicted();
 
-                currentAttackers -= casualties.getKey();
-                currentDefenders -= casualties.getValue();
+                currentAttackers -= casualties.getLeft();
+                currentDefenders -= casualties.getRight();
 
                 if (currentDefenders < 1) {
                     cumSurvivors += currentAttackers;

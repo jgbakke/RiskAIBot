@@ -1,6 +1,6 @@
 package com.sillysoft.lux.agent.utils.simulation;
 
-import javafx.util.Pair;
+import com.sillysoft.lux.agent.utils.Pair;
 
 import java.util.HashMap;
 import java.util.Random;

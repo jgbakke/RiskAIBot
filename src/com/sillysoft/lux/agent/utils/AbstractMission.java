@@ -1,10 +1,19 @@
 package com.sillysoft.lux.agent.utils;
 
 import com.sillysoft.lux.Board;
+import com.sillysoft.lux.agent.BigBadBot;
 
 public abstract class AbstractMission {
-    private double mlMissionWeight = 0;
-    private Board board;
+    protected double mlMissionWeight = 1;
+    protected Board board;
+    protected BigBadBot bot;
+
+    public AbstractMission(Board board, BigBadBot bot){
+        this.board = board;
+        this.bot = bot;
+    }
+
+    protected MissionBenefit cachedMission;
 
     public abstract MissionType getMissionType();
 
@@ -19,9 +28,5 @@ public abstract class AbstractMission {
 
     public void setMlMissionWeight(double mlMissionWeight) {
         this.mlMissionWeight = mlMissionWeight;
-    }
-
-    public void setBoard(Board board) {
-        this.board = board;
     }
 }
