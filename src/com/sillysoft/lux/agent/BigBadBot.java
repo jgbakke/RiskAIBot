@@ -192,8 +192,12 @@ public class BigBadBot extends SmartAgentBase {
     }
 
     public boolean takeContinent(int c){
-        if(attackToKillContinent(c)){
-            debugMessage("I killed the continent");
+        while(attackToKillContinent(c)){
+            debugMessage("I took over a country in the continent");
+        }
+
+        if(board.tookOverACountry()){
+            debugMessage("I took over a country so I am happy");
             return true;
         } else {
             debugMessage("I did not kill so I will attack for card");

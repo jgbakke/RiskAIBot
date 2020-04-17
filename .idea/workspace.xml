@@ -11,14 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d81b3bd-fdc0-4e53-8cd9-94dc192b0569" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/Pair.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBadBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/BigBadBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/AbstractMission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/AbstractMission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/MissionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/MissionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/TakeContinent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/TakeContinent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/CombatRoundResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/CombatRoundResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sillysoft/lux/agent/utils/simulation/MonteCarloSimulator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +161,7 @@
       <workItem from="1586914159252" duration="1165000" />
       <workItem from="1586922392375" duration="609000" />
       <workItem from="1586923078286" duration="1318000" />
-      <workItem from="1587017635558" duration="32919000" />
+      <workItem from="1587017635558" duration="33214000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1586762148773</created>
@@ -252,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587102119239</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="AI runs in Lux without crashing">
+      <created>1587107721196</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587107721196</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +285,8 @@
     <MESSAGE value="Tests for Monte Carlo" />
     <MESSAGE value="Make the tests for Monte Carlo pass" />
     <MESSAGE value="Continent path Monte Carlo simulations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continent path Monte Carlo simulations" />
+    <MESSAGE value="AI runs in Lux without crashing" />
+    <option name="LAST_COMMIT_MESSAGE" value="AI runs in Lux without crashing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="153" y="23" key="#Project_Structure" timestamp="1587029176661">
@@ -318,26 +321,26 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="413" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1280.708@0.23.1280.708" timestamp="1587083351496" />
-    <state x="179" y="23" key="CommitChangelistDialog2" timestamp="1587102118917">
+    <state x="179" y="23" key="CommitChangelistDialog2" timestamp="1587107720971">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="179" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587102118917" />
-    <state width="1188" height="294" key="GridCell.Tab.0.bottom" timestamp="1587107163346">
+    <state x="179" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1587107720971" />
+    <state width="1188" height="294" key="GridCell.Tab.0.bottom" timestamp="1587107519911">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587107163346" />
-    <state width="1188" height="294" key="GridCell.Tab.0.center" timestamp="1587107163345">
+    <state width="1188" height="294" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1587107519911" />
+    <state width="1188" height="294" key="GridCell.Tab.0.center" timestamp="1587107519911">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1587107163345" />
-    <state width="1188" height="294" key="GridCell.Tab.0.left" timestamp="1587107163345">
+    <state width="1188" height="294" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1587107519911" />
+    <state width="1188" height="294" key="GridCell.Tab.0.left" timestamp="1587107519910">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1587107163345" />
-    <state width="1188" height="294" key="GridCell.Tab.0.right" timestamp="1587107163346">
+    <state width="1188" height="294" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1587107519910" />
+    <state width="1188" height="294" key="GridCell.Tab.0.right" timestamp="1587107519911">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state width="1188" height="294" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1587107163346" />
+    <state width="1188" height="294" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1587107519911" />
     <state width="1188" height="203" key="GridCell.Tab.1.bottom" timestamp="1587084513215">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -366,10 +369,10 @@
       <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state x="132" y="23" width="982" height="708" key="SettingsEditor/0.23.1280.708@0.23.1280.708" timestamp="1587098974514" />
-    <state x="265" y="112" key="Vcs.Push.Dialog.v2" timestamp="1587094756944">
+    <state x="265" y="112" key="Vcs.Push.Dialog.v2" timestamp="1587107722628">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="265" y="112" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1587094756944" />
+    <state x="265" y="112" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1587107722628" />
     <state x="589" y="181" key="chooseDestDirectoryDialog" timestamp="1587083632489">
       <screen x="0" y="23" width="1280" height="708" />
     </state>

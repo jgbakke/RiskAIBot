@@ -49,16 +49,7 @@ public class TakeContinent extends AbstractMission {
     @Override
     public boolean executeMission() {
         bot.debugMessage("TakeContinent is executing its mission");
-
-        if(bot.takeContinent(cachedMission.optimalID)){
-            bot.debugMessage("Bot took continent");
-            return true;
-        } else {
-            // TODO: If continent not caputed then make it captured
-            bot.debugMessage("Did not take continent");
-        }
-
-        return false;
+        return bot.takeContinent(cachedMission.optimalID);
     }
 
     // Returns the number of countries in continent NOT owned by owner
