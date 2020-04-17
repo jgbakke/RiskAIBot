@@ -3,8 +3,12 @@ package com.sillysoft.lux.agent;
 import com.sillysoft.lux.Board;
 import com.sillysoft.lux.Country;
 import com.sillysoft.lux.agent.utils.AbstractMission;
-import com.sillysoft.lux.agent.utils.BigBadBotHelper;
+import com.sillysoft.lux.agent.utils.MissionBenefit;
 import com.sillysoft.lux.agent.utils.MissionManager;
+import com.sillysoft.lux.agent.utils.TakeContinent;
+import com.sillysoft.lux.agent.utils.simulation.MonteCarloSimulator;
+import com.sillysoft.lux.agent.utils.simulation.PathSimulationResult;
+import com.sillysoft.lux.agent.utils.simulation.SimulationResult;
 import com.sillysoft.lux.util.*;
 
 import java.io.BufferedReader;
@@ -13,13 +17,24 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 
 
 public class BigBadBot extends SmartAgentBase {
 
+    private static BigBadBot botReference;
+
+    public static BigBadBot getBotReference() {
+        return botReference;
+    }
+
     private final boolean DEBUG_MODE = true;
 
     private MissionManager missionManager;
+
+    private MonteCarloSimulator simulator = new MonteCarloSimulator();
 
     private AbstractMission currentMission;
 
@@ -64,7 +79,7 @@ public class BigBadBot extends SmartAgentBase {
     @Override
     public void setPrefs(int newID, Board theboard){
         super.setPrefs(newID, theboard);
-        BigBadBotHelper.initInstance(this);
+        botReference = this;
         missionManager = new MissionManager(theboard);
     }
 
@@ -163,35 +178,64 @@ public class BigBadBot extends SmartAgentBase {
         }
     }
 
-    public int getEasiestContToTake(int reinforcements) {
+    public PathSimulationResult simulatePath(int[] path, int reinforcements){
+        if(path == null){
+            return new PathSimulationResult(-1, -1, false);
+        }
+
+        Country[] countriesInRoute = new Country[path.length];
+        for (int i = 0; i < path.length; i++) {
+            countriesInRoute[i] = countries[path[i]];
+        }
+
+        return simulator.simulatePathResults(countriesInRoute, reinforcements + countriesInRoute[0].getArmies(), 100);
+    }
+
+    public PathSimulationResult simulateEasiestPathToContinent(int cont, int reinforcements){
+        int[] routeToCont = BoardHelper.cheapestRouteFromOwnerToCont(ID, cont, countries);
+        return simulatePath(routeToCont, reinforcements);
+    }
+
+    // Go through every continent
+    // Find how many countries we can take over if we go straight for a continent and
+    // what chance we have to take the continent
+    public MissionBenefit MissionBenefit(int reinforcements) {
         // Normally would override from SmartAgentBase but they do not accept a param
         // and cannot change that class (can't rebuild it)
 
-        // For each continent we calculate the ratio of (our armies):(enemy armies)
-        // The biggest one wins.
-        float easiestContRatio = -1;
-        int easiestCont = -1;
+
+        MissionBenefit optimalContinent = new MissionBenefit(-1, -1);
+
         for (int cont = 0; cont < numContinents; cont++) {
-            // Enemy ratio is armies + number of countries + number of path armies + number of path countries
+            double utility = 0;
+
             int enemies = BoardHelper.getEnemyArmiesInContinent( ID, cont, countries );
-            enemies += BoardHelper.getContinentSize(cont, countries);
 
-            // TODO: Monte Carlo for odds
-//            int[] routeToCont = BoardHelper.cheapestRouteFromOwnerToCont(ID, cont, countries);
-//            enemies +=
-//
-//            enemies +=
+            PathSimulationResult pathToContinent = simulateEasiestPathToContinent(cont, reinforcements);
+            int countriesGained = pathToContinent.countriesCaptured;
 
+            if(pathToContinent.reachedContinent) {
+                // Now that we reached the continent we also need to Monte Carlo simulate this
+                int ours = pathToContinent.armiesLeft;
 
-            int ours = BoardHelper.getPlayerArmiesInContinent( ID, cont, countries );
-            ours += reinforcements;
-            float newratio = (float)ours/(float)enemies;
-            if (newratio > easiestContRatio && board.getContinentBonus(cont) > 0) {
-                easiestCont = cont;
-                easiestContRatio = newratio;
+                int[] pathOnContinent = TakeContinent.unownedCountriesInContinent(ID, cont, countries);
+
+                PathSimulationResult continentBattle = simulatePath(pathOnContinent, pathToContinent.armiesLeft);
+                countriesGained += continentBattle.countriesCaptured;
+
+                if (continentBattle.reachedContinent) {
+                    countriesGained += board.getContinentBonus(cont);
+                }
             }
+
+            utility += countriesGained / 3.0;
+
+            if(utility > optimalContinent.utility){
+                optimalContinent = new MissionBenefit(cont, utility);
+            }
+
         }
 
-        return easiestCont;
+        return optimalContinent;
     }
 }
